@@ -1,0 +1,341 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    animation: fadeInHeader 1.5s ease-out;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: textAnimation 3s ease-in-out infinite;
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+/* Sticky Navigation Bar */
+#navbar {
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    padding-top: 120px;
+}
+
+.section {
+    background-color: white;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.section-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button.btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Content Toggle */
+.hidden {
+    display: none;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+.content ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.content ul li a:hover {
+    color: #f39c12;
+}
+
+/* Images */
+.section-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+#chat {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
+}
+
+#chat h2 {
+    font-size: 2.5em;
+}
+
+#chat p {
+    font-size: 1.2em;
+}
+
+button.btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Chat box styles */
+.chat-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+#messages {
+    max-height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+#chatInput {
+    width: 80%;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Animations */
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    #navbar ul {
+        display: block;
+    }
+    #navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Scroll Effects */
+body {
+    scroll-behavior: smooth;
+}
+/* Images */
+.section-img {
+    width: 100%;
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Specific Image Dimensions for Sections */
+#studies .section-img {
+    width: 100%;
+    height: 500px;
+}
+
+#skills .section-img {
+    width: 100%;
+    height: 600px;
+}
+
+#mental-health .section-img {
+    width: 100%;
+    height: 600px;
+}
+
+#dashboard .section-img {
+    width: 100%;
+    height: 400px;
+}
+
+/* Styles for content toggle */
+#studyResources ul li,
+#skillCourses ul li,
+#wellnessArticles ul li,
+#dashboardResources ul li {
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#studyResources ul li:hover,
+#skillCourses ul li:hover,
+#wellnessArticles ul li:hover,
+#dashboardResources ul li:hover {
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+#studyResources ul li a,
+#skillCourses ul li a,
+#wellnessArticles ul li a,
+#dashboardResources ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#studyResources ul li a:hover,
+#skillCourses ul li a:hover,
+#wellnessArticles ul li a:hover,
+#dashboardResources ul li a:hover {
+    color: #007BFF;
+}
+
+
+/* To Make Images Responsive */
+@media screen and (max-width: 768px) {
+    .section-img {
+        height: 200px; /* Adjust the height for mobile devices */
+    }
+}
